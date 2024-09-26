@@ -1,0 +1,92 @@
+/* Style pour la classe file-manager pour centrer la table horizontalement uniquement */
+.file-manager {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    padding: 20px;
+    background-color: #f4f4f4; /* Couleur de fond légère */
+}
+
+/* Style pour la table */
+.file-manager table {
+    width: 90%; /* Largeur du tableau sur 90% de l'écran */
+    max-width: 1200px; /* Largeur maximale pour grands écrans */
+    border-collapse: collapse; /* Supprime les espaces entre les bordures */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    border-radius: 8px; /* Coins arrondis */
+    overflow: hidden;
+    margin: 20px 0; /* Espacement autour de la table */
+}
+
+/* Style pour les cellules d'en-tête avec une teinte bleue */
+.file-manager thead th {
+    background-color: #007BFF; /* Bleu plus vif */
+    color: white;
+    text-align: left;
+    padding: 12px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* Style pour les cellules de corps du tableau */
+.file-manager tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd; /* Ligne de séparation subtile */
+    color: #333;
+    font-size: 14px;
+}
+
+/* Style pour les liens dans le tableau */
+.file-manager a {
+    color: #007BFF; /* Même teinte de bleu */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.file-manager a:hover {
+    text-decoration: underline; /* Souligné au survol */
+}
+
+/* Style pour les lignes paires et impaires */
+.file-manager tbody tr:nth-child(even) {
+    background-color: #e9f5ff; /* Légère teinte bleue pour les lignes paires */
+}
+
+.file-manager tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Agrandir les boutons d'action */
+.file-manager tbody td a {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.file-manager tbody td a:hover {
+    background-color: #ddd;
+}
+
+/* Petit ajustement pour supprimer la dernière bordure en bas */
+.file-manager tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Adaptation mobile */
+@media screen and (max-width: 768px) {
+    .file-manager table {
+        width: 100%;
+    }
+    
+    .file-manager thead th {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .file-manager tbody td {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
