@@ -7,6 +7,11 @@ $files = scandir($path);
 https://www.bestcours.com/programmation/
 // Exemple de données à afficher dans la table (peut être récupéré d'une base de données)   
 // Début de la table HTML
+
+
+echo '   <div class="tableau">';
+echo '     <button class="btn-add-file" onclick="ajouterFichier()">Ajouter un Fichier</button>';
+echo '       </div>';
 echo '<table border="1" cellpadding="10" cellspacing="0">';
 echo '<thead>';
 echo '<tr>';
