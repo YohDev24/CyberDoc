@@ -1,4 +1,5 @@
 function loadFileJS(htmlelement) {
+    console.log(htmlelement);
     var subcategory = htmlelement.getAttribute('data-subcategory');
     var parentCategoryElement = htmlelement.closest('.menu-item');
     var parentCategory = parentCategoryElement.childNodes[0].textContent.trim();
@@ -219,3 +220,21 @@ function redirection()
 {
             window.location.href = "../CyberDoc";
 }
+function redirectionAdd()
+{
+            window.location.href = "addFile.php";
+}
+
+window.addEventListener('load', function() {
+    const message = sessionStorage.getItem('message');
+    if (message) {
+        console.log("teestt" + message);
+         // Affiche "toto" après la redirection
+        // Ou tu peux l'afficher dans une partie du DOM si tu préfères
+        let element =  document.getElementById(message);
+        console.log(element);
+        loadFileJS(element);
+        sessionStorage.removeItem('message');
+
+    }
+});

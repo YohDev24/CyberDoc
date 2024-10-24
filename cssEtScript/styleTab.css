@@ -99,6 +99,10 @@
     flex-direction: column; /* On aligne les éléments en colonne */
 }
 
+.drop-area {
+    margin-bottom: 20px; /* Espacement entre la zone de drop et le bouton */
+}
+
 
 #file-list {
     display: flex;

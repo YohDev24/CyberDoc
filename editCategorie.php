@@ -62,7 +62,7 @@
                         <tr>
                             <td><?php echo $categorie; ?></td>
                             <td>
-                                <form action='update.php' method='POST' id='form_DelCate_<?php  echo $categorie;  ?>' style='display:inline;' onsubmit="veriform(event)">
+                                <form action='update-js.php' method='POST' id='form_DelCate_<?php  echo $categorie;  ?>' style='display:inline;' onsubmit="veriform(event)">
                                     <input type='hidden' require='required' name="cate" id="cate" value='<?php echo $categorie;  ?>'>
                                     <input type="hidden" require='required' name="action" id="action" value="DEL_CATE" >
                                     <button type="submit">Supprimer</button>
@@ -74,7 +74,7 @@
                 } ?>
 
                 <tr>
-                    <form action='update.php' method='POST' id="form_AddCate" style='display:inline;' onsubmit="veriform(event)" >
+                    <form action='update-js.php' method='POST' id="form_AddCate" style='display:inline;' onsubmit="veriform(event)" >
                         <td><input type='text' id='textbox' name='textbox' value=''></td>
                         <input type="hidden" require='required' name="action" id="action" value="ADD_CATE" >
 
@@ -109,7 +109,7 @@
                         <td><?php echo htmlspecialchars($sous_categorie['category']) ?></td>
                         <td><?php echo  htmlspecialchars($sous_categorie['subcategory']) ?></td>
                         <td>
-                            <form action='update.php'  method='POST' id='form_DelSubCate_<?php  echo $sous_categorie['subcategory'];  ?>'  style='display:inline;' onsubmit="veriform(event)">
+                            <form action='update-js.php'  method='POST' id='form_DelSubCate_<?php  echo $sous_categorie['subcategory'];  ?>'  style='display:inline;' onsubmit="veriform(event)">
                             <input type='hidden' require='required' name="cate" id="cate" value='<?php echo $sous_categorie['subcategory']; ?>'>
                             <input type="hidden" require='required' name="srcCate" id="srcCate" value="<?php echo $sous_categorie['category']; ?>" >
 
@@ -121,7 +121,7 @@
                 <?php }
                 } ?>
                 <tr>
-                <form action='update.php' method='POST' id="form_AddSubCate" style='display:inline;' onsubmit="veriform(event)" >
+                <form action='update-js.php' method='POST' id="form_AddSubCate" style='display:inline;' onsubmit="veriform(event)" >
 
                     <td>
                         <select id='srcCate' name='srcCate'>

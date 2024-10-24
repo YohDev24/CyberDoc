@@ -3,15 +3,15 @@
 $category = $_POST["subCate"];
 $path = __DIR__ . '/AllFiles/'.$category;
 $files = scandir($path);
-// faire genre un petit b   outtotn a droit ou autre qui fiare prense bêtre ou mettre les différents site a consultaer genre tools 
-https://www.bestcours.com/programmation/
-// Exemple de données à afficher dans la table (peut être récupéré d'une base de données)   
-// Début de la table HTML
 
+echo '<div class="tableau">';
+echo '<form action="addFile.php" method="post">';
+echo '<input type="hidden" name="dossier" value="'.$category.'">';
+echo'<button type="submit" class="btn-add-file">Ajouter un Fichier</button>';
+echo'</form>';
 
-echo '   <div class="tableau">';
-echo '     <button class="btn-add-file" onclick="ajouterFichier()">Ajouter un Fichier</button>';
-echo '       </div>';
+echo '</div>';
+
 echo '<table border="1" cellpadding="10" cellspacing="0">';
 echo '<thead>';
 echo '<tr>';
@@ -44,14 +44,14 @@ foreach ($files as $file) {
     // Bouton de suppression
     echo '<td style="text-align: center; vertical-align: middle;">
     <a href='.$path.'/'.$file.' onclick="openModal(\''. urlencode($category.'/'.$file) .'\',\'del\')">
-        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828774.png" alt="Voir" style="width: 20px; height: 20px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828774.png" alt="del" style="width: 20px; height: 20px;">
     </a>
 </td>';    
     // Bouton de partage
     // echo '<td><a href="share.php?file=' . urlencode($file['titre']) . '">Partager</a></td>';
     echo '<td style="text-align: center; vertical-align: middle;">
     <a href='.$path.'/'.$file.' onclick="openModal(\''. urlencode($category.'/'.$file) .'\',\'link\')">
-        <img src="https://cdn-icons-png.flaticon.com/512/929/929539.png" alt="Voir" style="width: 20px; height: 20px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/929/929539.png" alt="del" style="width: 20px; height: 20px;">
     </a>
 </td>';    
 

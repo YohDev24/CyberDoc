@@ -24,7 +24,9 @@ if (isset($_GET['file'])) {
         case 'LINK':
             echo "<p>en cours de création </p>";
             break;
-
+        case 'DEL':
+            echo("<p>ceci est un test de morts sa se trouve </p>");
+            break;
         case 'SETTING':
             getSetting($strSetting);
             break;
